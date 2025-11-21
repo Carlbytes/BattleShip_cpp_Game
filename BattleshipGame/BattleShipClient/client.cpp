@@ -1,100 +1,102 @@
 #include <SFML/Network.hpp>
 #include <iostream>
 #include <string>
+#include <sstream>
 #include <fstream>
 #include <optional>
 #include "Player.hpp"
 
-//Gives the options for the type of message being sent
-enum MessageType
-{
-    CHAT = 1,
-    FIRE_SHOT = 2,
-    GAME_RESULT = 3
-};
+enum MessageType { CHAT = 1, FIRE_SHOT = 2, GAME_RESULT = 3, SETUP_COMPLETE = 4 };
+enum GameState { MY_TURN, OPPONENTS_TURN };
 
-// Represents the current state of the game
-enum GameState
-{
-    MY_TURN,
-    OPPONENTS_TURN
-};
+void waitForKey() {
+    std::cout << "Press Enter to continue...";
+    std::cin.get();
+}
 
-// Tries to connect to the server at the given IP and port
-bool tryConnect(sf::TcpSocket& socket, const std::string& ipString, unsigned short port)
-{
-	// Attempt to resolve the IP address
-    std::cout << "Trying to connect to " << ipString << "..." << std::endl;
-	//This line will use std::optional to handle potential resolution failure
-    std::optional<sf::IpAddress> serverIpOptional = sf::IpAddress::resolve(ipString);
-	// Check if resolution was successful
-    if (!serverIpOptional)
-    {
-		//error handling for failed resolution
-        std::cerr << "Error: Could not resolve IP address '" << ipString << "'" << std::endl;
-        return false;
+bool getCoordinates(int& x, int& y) {
+    std::string line;
+    std::getline(std::cin, line);
+    for (char& c : line) {
+        if (c == ',') c = ' ';
     }
-	// Attempt to connect to the server
-    sf::IpAddress serverIp = serverIpOptional.value();
-	// Try to connect
-    if (socket.connect(serverIp, port) == sf::Socket::Status::Done)
-    {
-        return true; // Success!
-    }
-    else
-    {
-        std::cerr << "Connection failed." << std::endl;
-        return false; // Failed
+    std::stringstream ss(line);
+    if (ss >> x >> y) return true;
+    return false;
+}
+
+std::string getShipName(int colorCode) {
+    switch (colorCode) {
+        case 1: return "Battleship (1x4)";
+        case 2: return "Cruiser (1x3)";
+        case 3: return "Submarine (1x3)";
+        case 4: return "Destroyer (1x2)";
+        case 5: return "Patrol Boat (1x2)";
+        default: return "Ship";
     }
 }
 
-// Entry point of the client application
+bool tryConnect(sf::TcpSocket& socket, const std::string& ipString, unsigned short port)
+{
+    std::cout << "Connecting to " << ipString << "...\n";
+    std::optional<sf::IpAddress> serverIp = sf::IpAddress::resolve(ipString);
+    if (!serverIp) return false;
+    if (socket.connect(serverIp.value(), port) == sf::Socket::Status::Done) return true;
+    return false;
+}
+
 int main()
 {
-	// Set up the client socket and connection parameters
     sf::TcpSocket socket;
     unsigned short port = 54000;
     std::string ipAddressString;
     const std::string configFilename = "ip_config.txt";
 
-
-	// --- CONNECTION LOGIC ---
     std::ifstream configFileIn(configFilename);
     if (configFileIn.is_open()) { std::getline(configFileIn, ipAddressString); configFileIn.close(); }
     else { ipAddressString = "127.0.0.1"; }
+
     bool isConnected = tryConnect(socket, ipAddressString, port);
-	// If initial connection fails, prompt for new IP
-    if (!isConnected)
-    {
-		//If connection fails, prompt user for new IP
-        std::cout << "\nPlease enter a new server IP address: ";
-		//saves the new IP address
+    if (!isConnected) {
+        std::cout << "Enter Server IP: ";
         std::cin >> ipAddressString;
-		//Try to connect again with the new IP
         isConnected = tryConnect(socket, ipAddressString, port);
-		//If connection is successful, save the new IP to config file
-        if (isConnected) { std::ofstream configFileOut(configFilename); if (configFileOut.is_open()) { configFileOut << ipAddressString; configFileOut.close(); std::cout << "New IP saved.\n"; } }
+        if (isConnected) {
+            std::ofstream out(configFilename);
+            if (out.is_open()) { out << ipAddressString; out.close(); }
+        }
     }
-	// Handle failed connection
-    if (!isConnected) { std::cerr << "Could not connect. Exiting.\n"; return 1; }
+    if (!isConnected) return 1;
 
-    std::cout << "Connected to server! Setting up game...\n";
-
-	// ~~Game Setup~~
-	// ----------------------
-	Player myPlayer;
-    myPlayer.setupBoard();
-    // ----------------------
+    std::cout << "Connected!\n";
 
     sf::Packet packet;
+    Player myPlayer;
+    myPlayer.setupBoard();
+
+    // --- Sync ---
+    std::cout << "Waiting for opponent...\n";
+    packet << (int)MessageType::SETUP_COMPLETE << "Ready";
+    socket.send(packet);
+
+    bool opponentReady = false;
+    while (!opponentReady) {
+        packet.clear();
+        if (socket.receive(packet) == sf::Socket::Status::Done) {
+            int type;
+            if (packet >> type && type == MessageType::SETUP_COMPLETE) opponentReady = true;
+        }
+    }
+    std::cout << "Game Start!\n";
+    // ------------
+
     int messageType;
     std::string chatMessage;
-    int x_coord;
-    int y_coord;
+    int x_coord, y_coord;
     std::string responseString;
+    int hitColor = 0;
 
-    std::cin.ignore(1000, '\n'); // Clear buffer
-    GameState currentState = GameState::MY_TURN; // Client starts
+    GameState currentState = GameState::MY_TURN;
 
     while (true)
     {
@@ -102,136 +104,121 @@ int main()
         {
             myPlayer.drawGameScreen();
 
-            //Win condition check
-        	if (myPlayer.hitsScored >= myPlayer.shipsToPlace)
-            {
-                std::cout << "\n*** ALL ENEMY SHIPS SUNK! YOU WIN! ***\n";
+            if (myPlayer.hitsScored >= myPlayer.totalShipHealth) {
+                std::cout << "\n*** YOU WIN! ***\n";
                 break;
             }
 
-			// Prompt for action
             std::cout << "\nMY TURN: (c) to chat or (f) to fire: ";
             char action;
             std::cin >> action;
             std::cin.ignore(1000, '\n');
             packet.clear();
 
-			// Handle chat action
-            if (action == 'c' || action == 'C')
-            {
+            if (action == 'c' || action == 'C') {
                 messageType = MessageType::CHAT;
-                std::cout << "Enter your message: ";
+                std::cout << "Enter message: ";
                 std::getline(std::cin, chatMessage);
                 packet << messageType << chatMessage;
-				// Send the packet to the server
                 if (socket.send(packet) != sf::Socket::Status::Done) break;
             }
-			// Handle fire action
-            else if (action == 'f' || action == 'F')
-            {
+            else if (action == 'f' || action == 'F') {
                 messageType = MessageType::FIRE_SHOT;
-                std::cout << "Enter X coordinate: ";
-                std::cin >> x_coord;
-                std::cout << "Enter Y coordinate: ";
-                std::cin >> y_coord;
-                std::cin.ignore(1000, '\n');
 
-				// Package and send the fire shot message
+                bool validCoords = false;
+                while (!validCoords) {
+                    std::cout << "Enter Coordinates (X, Y): ";
+                    if (getCoordinates(x_coord, y_coord)) {
+                         if (x_coord >= 0 && x_coord < 10 && y_coord >= 0 && y_coord < 10) {
+                            TileState existing = myPlayer.opponentBoard.getTileState(x_coord, y_coord);
+                            if (existing == TileState::HIT || existing == TileState::MISS) {
+                                std::cout << "Already fired there!\n";
+                            } else {
+                                validCoords = true;
+                            }
+                        } else {
+                            std::cout << "Out of bounds.\n";
+                        }
+                    } else {
+                        std::cout << "Invalid format.\n";
+                    }
+                }
+
                 packet << messageType << x_coord << y_coord;
-				// Send the packet to the server
                 if (socket.send(packet) != sf::Socket::Status::Done) break;
 
-				//  Await and process server's response
-                std::cout << "Waiting for server's reply..." << std::endl;
+                std::cout << "Waiting for reply...\n";
                 if (socket.receive(packet) != sf::Socket::Status::Done) break;
 
                 int responseType = 0;
-				// Extract response type and string
-                if (packet >> responseType >> responseString && responseType == MessageType::GAME_RESULT)
+                if (packet >> responseType >> responseString >> hitColor && responseType == MessageType::GAME_RESULT)
                 {
-					// Display server's response
-                    std::cout << "Server said: " << responseString << std::endl;
-
-					// --- UPDATE OPPONENT'S BOARD ---
-                    if (responseString == "You Hit!")
+                    std::cout << "Result: " << responseString << std::endl;
+                    if (hitColor > 0)
                     {
-                        myPlayer.opponentBoard.markHit(x_coord, y_coord);
-                        myPlayer.recordHit(); // CHANGED: Record the successful hit
+                        myPlayer.opponentBoard.markHit(x_coord, y_coord, hitColor);
+                        myPlayer.recordHit();
                     }
-					// If it was a miss
                     else
                     {
                         myPlayer.opponentBoard.markMiss(x_coord, y_coord);
                     }
+                    waitForKey();
                 }
                 currentState = GameState::OPPONENTS_TURN;
             }
         }
-		// Handle opponent's turn
-        else // currentState == GameState::OPPONENTS_TURN
+        else // OPPONENTS_TURN
         {
             myPlayer.drawGameScreen();
 
-            // Check for a loss
-            if (myPlayer.myBoard.isGameOver())
-            {
-                std::cout << "\n*** ALL YOUR SHIPS ARE SUNK! YOU LOSE! ***\n";
+            if (myPlayer.myBoard.isGameOver()) {
+                std::cout << "\n*** YOU LOSE! ***\n";
                 break;
             }
 
-            std::cout << "\nWaiting for opponent's move..." << std::endl;
-            if (socket.receive(packet) != sf::Socket::Status::Done)
-            {
-                std::cout << "Server disconnected." << std::endl;
-                break;
-            }
-			// Extract message type
-            if (!(packet >> messageType))
-            {
-                std::cerr << "Error: Malformed packet." << std::endl;
-                continue;
-            }
+            std::cout << "\nWaiting for opponent...\n";
+            if (socket.receive(packet) != sf::Socket::Status::Done) break;
 
-			// Process based on message type
-            if (messageType == MessageType::CHAT)
-            {
-                if (packet >> chatMessage)
-                {
-                    std::cout << "Opponent chat: " << chatMessage << std::endl;
+            if (!(packet >> messageType)) continue;
 
-					// Pause to let user read the message
-                	std::cout << "(Press Enter to continue...)";
-                    std::string dummy;
-                    std::getline(std::cin, dummy); // This waits for the user to press Enter
+            if (messageType == MessageType::CHAT) {
+                if (packet >> chatMessage) {
+                    std::cout << "Chat: " << chatMessage << std::endl;
+                    waitForKey();
                 }
             }
-            
-            else if (messageType == MessageType::FIRE_SHOT)
-            {
-                if (packet >> x_coord >> y_coord)
-                {
-                    std::cout << "Opponent fired at (" << x_coord << ", " << y_coord << ")" << std::endl;
-					// --- CHECK SHOT RESULT ---
+            else if (messageType == MessageType::SETUP_COMPLETE) continue;
+            else if (messageType == MessageType::FIRE_SHOT) {
+                if (packet >> x_coord >> y_coord) {
+                    std::cout << "Opponent fired at (" << x_coord << ", " << y_coord << ")\n";
+
                     TileState result = myPlayer.myBoard.checkShot(x_coord, y_coord);
+                    hitColor = 0;
+
                     if (result == TileState::HIT)
                     {
-                        responseString = "You Hit!";
+                        hitColor = myPlayer.myBoard.getTileColor(x_coord, y_coord);
+                        if (myPlayer.myBoard.isShipSunk(hitColor)) {
+                             responseString = "You Sunk my " + getShipName(hitColor) + "!";
+                        } else {
+                             responseString = "You Hit!";
+                        }
                     }
                     else
                     {
                         responseString = "You Missed!";
                     }
-                    // -----------------------------------------
 
                     int responseType = MessageType::GAME_RESULT;
                     packet.clear();
-                    packet << responseType << responseString;
+                    packet << responseType << responseString << hitColor;
                     if (socket.send(packet) != sf::Socket::Status::Done) break;
                 }
                 currentState = GameState::MY_TURN;
             }
         }
     }
-    system("pause"); // Wait before closing
+    waitForKey();
     return 0;
 }

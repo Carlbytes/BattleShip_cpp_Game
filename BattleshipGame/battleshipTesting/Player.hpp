@@ -7,8 +7,8 @@ public:
     Board myBoard;
     Board opponentBoard;
 
-	//Variables for win condition
-    int shipsToPlace;
+    // Variables for win condition
+    int totalShipHealth; // Total number of SHIP tiles
     int hitsScored;
 
     Player(); 
