@@ -1,0 +1,4 @@
+C:/College Stuff/Year Three/Y3 Reposits/SftDevGameProject/BattleshipGame/out/build/x64-Debug/CMakeFiles/BattleShipServer.dir
+C:/College Stuff/Year Three/Y3 Reposits/SftDevGameProject/BattleshipGame/out/build/x64-Debug/CMakeFiles/BattleShipClient.dir
+C:/College Stuff/Year Three/Y3 Reposits/SftDevGameProject/BattleshipGame/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/College Stuff/Year Three/Y3 Reposits/SftDevGameProject/BattleshipGame/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
