@@ -1,6 +1,5 @@
 #include "Player.hpp"
 #include <iostream>
-#include <vector>
 
 // --- Cross-Platform Input Handling ---
 #ifdef _WIN32
@@ -10,6 +9,7 @@
 #define KEY_LEFT 75
 #define KEY_RIGHT 77
 #define KEY_ENTER 13
+#define KEY_SPACE 32
 #define KEY_R 114
 
 int getKeyPress() {
@@ -34,6 +34,7 @@ void clearScreen() {
 #define KEY_RIGHT 67
 #define KEY_LEFT 68
 #define KEY_ENTER 10
+#define KEY_SPACE 32
 #define KEY_R 114
 
 // Linux implementation of getch()
@@ -63,9 +64,16 @@ void clearScreen() {
 
 Player::Player()
 {
-    // Total hits required to win: 1x4 + 2x3 + 2x3 + 2x2 + 2x2 = 14
     totalShipHealth = 14;
     hitsScored = 0;
+
+    // OOP: Instantiating specific classes into a polymorphic container
+    // This meets the requirement for Inheritance and Polymorphism
+    fleet.push_back(std::make_unique<Battleship>());
+    fleet.push_back(std::make_unique<Cruiser>());
+    fleet.push_back(std::make_unique<Submarine>());
+    fleet.push_back(std::make_unique<Destroyer>());
+    fleet.push_back(std::make_unique<PatrolBoat>());
 }
 
 void Player::recordHit()
@@ -75,46 +83,68 @@ void Player::recordHit()
 
 void Player::setupBoard()
 {
-    // Define the fleet: size and color ID
-    // 1x4, 1x3, 1x3, 1x2, 1x2
-    struct ShipReq { int size; int color; };
-    std::vector<ShipReq> fleet = {
-        {4, 1}, // Cyan
-        {3, 2}, // Yellow
-        {3, 3}, // Magenta
-        {2, 4}, // Green
-        {2, 5}  // Blue
-    };
-
     int cursorX = 0;
     int cursorY = 0;
     bool horizontal = true;
 
+    // OOP: Looping through objects using the Base Class pointer
+    // This demonstrates polymorphism (getName() behaves differently for each ship)
     for (size_t i = 0; i < fleet.size(); ++i)
     {
+        Ship* currentShip = fleet[i].get();
+
         bool placed = false;
         while (!placed)
         {
-            bool valid = myBoard.isValidPlacement(cursorX, cursorY, fleet[i].size, horizontal);
-            myBoard.displayWithCursor(true, cursorX, cursorY, fleet[i].size, horizontal, valid);
+            // Use getters from the class (Encapsulation)
+            bool valid = myBoard.isValidPlacement(cursorX, cursorY, currentShip->getSize(), horizontal);
+            myBoard.displayWithCursor(true, cursorX, cursorY, currentShip->getSize(), horizontal, valid);
 
-            std::cout << "Placing Ship " << (i+1) << "/" << fleet.size()
-                      << " (Size: " << fleet[i].size << ")\n";
+            std::cout << "Placing " << currentShip->getName() << " (" << (i + 1) << "/" << fleet.size() << ")\n";
+            std::cout << "Size: " << currentShip->getSize() << "\n";
+            std::cout << "Controls: WASD/Arrows to Move, R to Rotate, ENTER/SPACE to Place\n";
 
             int key = getKeyPress();
 
-            switch(key) {
-                case KEY_UP:    if(cursorY > 0) cursorY--; break;
-                case KEY_DOWN:  if(cursorY < 9) cursorY++; break;
-                case KEY_LEFT:  if(cursorX > 0) cursorX--; break;
-                case KEY_RIGHT: if(cursorX < 9) cursorX++; break;
-                case KEY_R: horizontal = !horizontal; break;
-                case KEY_ENTER:
-                    if (valid) {
-                        myBoard.placeShip(cursorX, cursorY, fleet[i].size, horizontal, fleet[i].color);
-                        placed = true;
-                    }
-                    break;
+            switch (key) {
+                // Up
+            case KEY_UP:
+            case 'w': case 'W':
+                if (cursorY > 0) cursorY--;
+                break;
+
+                // Down
+            case KEY_DOWN:
+            case 's': case 'S':
+                if (cursorY < 9) cursorY++;
+                break;
+
+                // Left
+            case KEY_LEFT:
+            case 'a': case 'A':
+                if (cursorX > 0) cursorX--;
+                break;
+
+                // Right
+            case KEY_RIGHT:
+            case 'd': case 'D':
+                if (cursorX < 9) cursorX++;
+                break;
+
+                // Rotate
+            case 'r': case 'R':
+                horizontal = !horizontal;
+                break;
+
+                // Place Ship
+            case KEY_ENTER:
+            case ' ': // Spacebar
+                if (valid) {
+                    // Pass the ID from the object to the board
+                    myBoard.placeShip(cursorX, cursorY, currentShip->getSize(), horizontal, currentShip->getColorId());
+                    placed = true;
+                }
+                break;
             }
         }
     }
@@ -124,10 +154,10 @@ void Player::setupBoard()
 
 void Player::drawGameScreen()
 {
-    clearScreen();
+    // clearScreen(); // Uncomment if you want to clear the history
     std::cout << "--- YOUR BOARD (Your Ships) ---\n";
-    myBoard.display(true); // Show my ships with colors
+    myBoard.display(true);
     std::cout << "\n--- OPPONENT'S BOARD (Your Shots) ---\n";
-    opponentBoard.display(false); // Hide their ships
+    opponentBoard.display(false);
     std::cout << "-----------------------------------\n";
 }
