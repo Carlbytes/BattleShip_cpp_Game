@@ -10,10 +10,10 @@ enum GameState { MY_TURN, OPPONENTS_TURN };
 
 class GameManager {
 private:
-    // 1. Private static instance
+    // Private static instance
     static GameManager* instance;
 
-    // 2. Private constructor (prevents "new GameManager()" from outside)
+    // Private constructor (prevents "new GameManager()" from outside)
     GameManager();
 
     // Helper methods (Internal logic)
@@ -24,7 +24,7 @@ private:
     std::string getShipName(int colorCode);
 
 public:
-    // 3. Public static accessor (The only way to get the object)
+    // Public static accessor (The only way to get the object)
     static GameManager* getInstance();
 
     // The main entry point

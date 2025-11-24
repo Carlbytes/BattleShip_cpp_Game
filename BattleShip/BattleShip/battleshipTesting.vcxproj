@@ -106,12 +106,12 @@
       <PreprocessorDefinitions>SFML_STATIC</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\CollegeStuff\Y3 Repos\SftDevGameProject\BattleshipGame\battleshipServer\External\SFML-3.0.2\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\CollegeStuff\Y3 Repos\SftDevGameProject\BattleShip\BattleShip\External\SFML-3.0.2\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\CollegeStuff\Y3 Repos\SftDevGameProject\BattleshipGame\battleshipServer\External\SFML-3.0.2\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\CollegeStuff\Y3 Repos\SftDevGameProject\BattleShip\BattleShip\External\SFML-3.0.2\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics-s-d.lib;sfml-window-s-d.lib;sfml-system-s-d.lib;sfml-network-s-d.lib;sfml-audio-s-d.lib;opengl32.lib;freetype.lib;winmm.lib;gdi32.lib;ws2_32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
@@ -128,12 +128,12 @@
       <PreprocessorDefinitions>SFML_STATIC</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\CollegeStuff\Y3 Repos\SftDevGameProject\BattleshipGame\battleshipServer\External\SFML-3.0.2\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\CollegeStuff\Y3 Repos\SftDevGameProject\BattleShip\BattleShip\External\SFML-3.0.2\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\CollegeStuff\Y3 Repos\SftDevGameProject\BattleshipGame\battleshipServer\External\SFML-3.0.2\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\CollegeStuff\Y3 Repos\SftDevGameProject\BattleShip\BattleShip\External\SFML-3.0.2\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics-s.lib;sfml-window-s.lib;sfml-system-s.lib;sfml-network-s.lib;sfml-audio-s.lib;opengl32.lib;freetype.lib;winmm.lib;gdi32.lib;ws2_32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>

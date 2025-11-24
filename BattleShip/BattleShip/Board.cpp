@@ -8,15 +8,15 @@
 #endif
 
 // ANSI Color Codes
-const std::string ANSI_RESET   = "\033[0m";
-const std::string ANSI_RED     = "\033[31m";
-const std::string ANSI_GREEN   = "\033[32m";
-const std::string ANSI_YELLOW  = "\033[33m";
-const std::string ANSI_BLUE    = "\033[34m";
+const std::string ANSI_RESET = "\033[0m";
+const std::string ANSI_RED = "\033[31m";
+const std::string ANSI_GREEN = "\033[32m";
+const std::string ANSI_YELLOW = "\033[33m";
+const std::string ANSI_BLUE = "\033[34m";
 const std::string ANSI_MAGENTA = "\033[35m";
-const std::string ANSI_CYAN    = "\033[36m";
-const std::string ANSI_WHITE   = "\033[37m";
-const std::string ANSI_BG_WHITE= "\033[47m";
+const std::string ANSI_CYAN = "\033[36m";
+const std::string ANSI_WHITE = "\033[37m";
+const std::string ANSI_BG_WHITE = "\033[47m";
 
 Board::Board()
 {
@@ -32,13 +32,13 @@ Board::Board()
 
 std::string Board::getColorString(int colorCode)
 {
-    switch(colorCode) {
-        case 1: return ANSI_CYAN;
-        case 2: return ANSI_YELLOW;
-        case 3: return ANSI_MAGENTA;
-        case 4: return ANSI_GREEN;
-        case 5: return ANSI_BLUE;
-        default: return ANSI_RESET;
+    switch (colorCode) {
+    case 1: return ANSI_CYAN;
+    case 2: return ANSI_YELLOW;
+    case 3: return ANSI_MAGENTA;
+    case 4: return ANSI_GREEN;
+    case 5: return ANSI_BLUE;
+    default: return ANSI_RESET;
     }
 }
 
@@ -46,13 +46,13 @@ std::string Board::getColorString(int colorCode)
 // 1: Cyan (4), 2: Yellow (3), 3: Magenta (3), 4: Green (2), 5: Blue (2)
 int Board::getShipSize(int colorId)
 {
-    switch(colorId) {
-        case 1: return 4;
-        case 2: return 3;
-        case 3: return 3;
-        case 4: return 2;
-        case 5: return 2;
-        default: return 0;
+    switch (colorId) {
+    case 1: return 4;
+    case 2: return 3;
+    case 3: return 3;
+    case 4: return 2;
+    case 5: return 2;
+    default: return 0;
     }
 }
 
@@ -84,7 +84,8 @@ void Board::display(bool showShips)
                 if (showShips) {
                     // On MY board, I know if it's sunk by checking remaining parts
                     sunk = isShipSunk(t.colorCode);
-                } else {
+                }
+                else {
                     // On OPPONENT board, I only know hits.
                     // Check if hits match total size.
                     int totalSize = getShipSize(t.colorCode);
@@ -122,9 +123,9 @@ void Board::displayWithCursor(bool showShips, int cursorX, int cursorY, int ship
     std::cout << "   0 1 2 3 4 5 6 7 8 9\n";
 
     std::vector<std::pair<int, int>> ghostCells;
-    for(int i=0; i<shipSize; ++i) {
-        if(horizontal) ghostCells.push_back({cursorX + i, cursorY});
-        else           ghostCells.push_back({cursorX, cursorY + i});
+    for (int i = 0; i < shipSize; ++i) {
+        if (horizontal) ghostCells.push_back({ cursorX + i, cursorY });
+        else           ghostCells.push_back({ cursorX, cursorY + i });
     }
 
     for (int y = 0; y < 10; ++y)
@@ -133,8 +134,8 @@ void Board::displayWithCursor(bool showShips, int cursorX, int cursorY, int ship
         for (int x = 0; x < 10; ++x)
         {
             bool isCursor = false;
-            for(auto& p : ghostCells) {
-                if(p.first == x && p.second == y) {
+            for (auto& p : ghostCells) {
+                if (p.first == x && p.second == y) {
                     isCursor = true;
                     break;
                 }
@@ -157,7 +158,7 @@ void Board::displayWithCursor(bool showShips, int cursorX, int cursorY, int ship
         }
         std::cout << "\n";
     }
-    std::cout << "\nUse ARROWS/WASD to move, 'R' to rotate, ENTER to place.\n";
+    // REMOVED THE HARDCODED INSTRUCTION TEXT HERE
 }
 
 TileState Board::checkShot(int x, int y)
@@ -179,13 +180,13 @@ TileState Board::checkShot(int x, int y)
 
 bool Board::isValidPlacement(int x, int y, int size, bool horizontal)
 {
-    for(int i = 0; i < size; ++i)
+    for (int i = 0; i < size; ++i)
     {
         int cx = horizontal ? x + i : x;
         int cy = horizontal ? y : y + i;
 
-        if(cx < 0 || cx >= 10 || cy < 0 || cy >= 10) return false;
-        if(grid[cx][cy].state != TileState::EMPTY) return false;
+        if (cx < 0 || cx >= 10 || cy < 0 || cy >= 10) return false;
+        if (grid[cx][cy].state != TileState::EMPTY) return false;
     }
     return true;
 }
@@ -194,7 +195,7 @@ void Board::placeShip(int x, int y, int size, bool horizontal, int colorId)
 {
     if (!isValidPlacement(x, y, size, horizontal)) return;
 
-    for(int i = 0; i < size; ++i)
+    for (int i = 0; i < size; ++i)
     {
         int cx = horizontal ? x + i : x;
         int cy = horizontal ? y : y + i;

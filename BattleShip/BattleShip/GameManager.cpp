@@ -6,6 +6,58 @@
 #include <cstdlib> // For rand()
 #include <ctime>   // For time()
 
+// --- Cross-Platform Input Handling (Local to this file) ---
+#ifdef _WIN32
+#include <conio.h>
+#define KEY_UP 72
+#define KEY_DOWN 80
+#define KEY_LEFT 75
+#define KEY_RIGHT 77
+#define KEY_ENTER 13
+#define KEY_SPACE 32
+#define KEY_R 114
+
+static int getKeyPress() {
+    int ch = _getch();
+    if (ch == 0 || ch == 224) {
+        return _getch(); // Extended code
+    }
+    return ch;
+}
+
+static void clearScreen() {
+    system("cls");
+}
+
+#else
+#include <termios.h>
+#include <unistd.h>
+#include <stdio.h>
+
+#define KEY_UP 65
+#define KEY_DOWN 66
+#define KEY_RIGHT 67
+#define KEY_LEFT 68
+#define KEY_ENTER 10
+#define KEY_SPACE 32
+#define KEY_R 114
+
+static int getKeyPress() {
+    struct termios oldt, newt;
+    int ch;
+    tcgetattr(STDIN_FILENO, &oldt);
+    newt = oldt;
+    newt.c_lflag &= ~(ICANON | ECHO);
+    tcsetattr(STDIN_FILENO, TCSANOW, &newt);
+    ch = getchar();
+    if (ch == 27) { getchar(); ch = getchar(); }
+    tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
+    return ch;
+}
+static void clearScreen() { system("clear"); }
+#endif
+// ----------------------------------------------------------
+
 //Initialize the static instance to null
 GameManager* GameManager::instance = nullptr;
 
@@ -234,32 +286,47 @@ void GameManager::runGame(bool isServer) {
             }
             else if (action == 'f' || action == 'F') {
                 messageType = MessageType::FIRE_SHOT;
-                bool validCoords = false;
-                //Loop for valid coordinates
-                while (!validCoords) {
-                    std::cout << "Enter Coordinates (X, Y): ";
-                    if (getCoordinates(x_coord, y_coord)) {
-                        if (x_coord >= 0 && x_coord < 10 && y_coord >= 0 && y_coord < 10) {
-                            TileState existing = myPlayer.opponentBoard.getTileState(x_coord, y_coord);
-                            if (existing == TileState::HIT || existing == TileState::MISS) {
-                                std::cout << "Already fired there!\n";
-                            }
-                            else {
-                                validCoords = true;
-                            }
+
+                // --- NEW CURSOR BASED TARGETING ---
+                int cursorX = 0;
+                int cursorY = 0;
+                bool targetSelected = false;
+
+                while (!targetSelected) {
+                    // Valid if we haven't shot there yet (EMPTY or SHIP means we haven't hit/missed yet)
+                    // Note: On opponent board, SHIP state is hidden, so initially everything looks EMPTY.
+                    // If we previously fired, it would be HIT or MISS.
+                    TileState ts = myPlayer.opponentBoard.getTileState(cursorX, cursorY);
+                    bool validTarget = (ts == TileState::EMPTY || ts == TileState::SHIP);
+
+                    // Use the Board's cursor display (Reuse the ship placement visualizer!)
+                    // showShips=false (don't see enemy), size=1, horizontal=true (doesn't matter for 1x1)
+                    myPlayer.opponentBoard.displayWithCursor(false, cursorX, cursorY, 1, true, validTarget);
+
+                    // UPDATED PROMPT HERE:
+                    std::cout << "\nSelect where to fire: WASD/ARROWS to move, ENTER/SPACE to Shoot\n";
+                    int key = getKeyPress();
+
+                    switch (key) {
+                    case KEY_UP: case 'w': case 'W': if (cursorY > 0) cursorY--; break;
+                    case KEY_DOWN: case 's': case 'S': if (cursorY < 9) cursorY++; break;
+                    case KEY_LEFT: case 'a': case 'A': if (cursorX > 0) cursorX--; break;
+                    case KEY_RIGHT: case 'd': case 'D': if (cursorX < 9) cursorX++; break;
+                    case KEY_ENTER: case ' ':
+                        if (validTarget) {
+                            x_coord = cursorX;
+                            y_coord = cursorY;
+                            targetSelected = true;
                         }
-                        else {
-                            std::cout << "Out of bounds.\n";
-                        }
-                    }
-                    else {
-                        std::cout << "Invalid format.\n";
+                        break;
                     }
                 }
+                // ----------------------------------
+
                 packet << messageType << x_coord << y_coord;
                 if (socket.send(packet) != sf::Socket::Status::Done) break;
 
-                std::cout << "Waiting for reply...\n";
+                std::cout << "Firing at " << x_coord << "," << y_coord << "... Waiting for reply...\n";
                 if (socket.receive(packet) != sf::Socket::Status::Done) break;
 
                 int responseType = 0;
@@ -311,16 +378,10 @@ void GameManager::runGame(bool isServer) {
 
                     if (result == TileState::HIT) {
                         hitColor = myPlayer.myBoard.getTileColor(x_coord, y_coord);
-                        if (myPlayer.myBoard.isShipSunk(hitColor)) {
-                            responseString = "You Sunk my " + getShipName(hitColor) + "!";
-                        }
-                        else {
-                            responseString = "You Hit!";
-                        }
+                        if (myPlayer.myBoard.isShipSunk(hitColor)) responseString = "You Sunk my " + getShipName(hitColor) + "!";
+                        else responseString = "You Hit!";
                     }
-                    else {
-                        responseString = "You Missed!";
-                    }
+                    else responseString = "You Missed!";
 
                     int responseType = MessageType::GAME_RESULT;
                     packet.clear();
