@@ -146,19 +146,50 @@ void Board::displayWithCursor(bool showShips, int cursorX, int cursorY, int ship
             if (isCursor)
             {
                 std::string color = valid ? ANSI_GREEN : ANSI_RED;
-                std::cout << ANSI_BG_WHITE << color << (t.state == TileState::SHIP ? "X " : "# ") << ANSI_RESET;
+                // If hovering over an existing hit/miss, show '?' to indicate "Are you sure?"
+                // otherwise show 'X' or '#'
+                char symbol = (t.state == TileState::SHIP || t.state == TileState::EMPTY) ? (t.state == TileState::SHIP ? 'X' : '#') : '?';
+                std::cout << ANSI_BG_WHITE << color << symbol << " " << ANSI_RESET;
             }
             else
             {
-                if (t.state == TileState::SHIP && showShips)
-                    std::cout << getColorString(t.colorCode) << "# " << ANSI_RESET;
-                else
+                // --- UPDATED VISUAL LOGIC ---
+                // This block now correctly shows previous Hits/Misses
+
+                if (t.state == TileState::HIT)
+                {
+                    bool sunk = false;
+                    if (showShips) {
+                        sunk = isShipSunk(t.colorCode);
+                    }
+                    else {
+                        int totalSize = getShipSize(t.colorCode);
+                        if (totalSize > 0 && countHits(t.colorCode) >= totalSize) sunk = true;
+                    }
+
+                    if (sunk) std::cout << ANSI_RED << "O " << ANSI_RESET;
+                    else      std::cout << ANSI_RED << "X " << ANSI_RESET;
+                }
+                else if (t.state == TileState::MISS)
+                {
+                    std::cout << ANSI_WHITE << "O " << ANSI_RESET;
+                }
+                else if (t.state == TileState::SHIP)
+                {
+                    if (showShips)
+                        std::cout << getColorString(t.colorCode) << "# " << ANSI_RESET;
+                    else
+                        std::cout << "~ ";
+                }
+                else // EMPTY
+                {
                     std::cout << "~ ";
+                }
+                // -----------------------------
             }
         }
         std::cout << "\n";
     }
-    // REMOVED THE HARDCODED INSTRUCTION TEXT HERE
 }
 
 TileState Board::checkShot(int x, int y)

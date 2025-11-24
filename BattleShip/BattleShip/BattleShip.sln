@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36623.8
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BattleShipServer", "battleshipTesting.vcxproj", "{C953CAFE-1F56-46B4-B939-3A83406F7BFF}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BattleShip", "battleshipTesting.vcxproj", "{C953CAFE-1F56-46B4-B939-3A83406F7BFF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "battleShipTests", "..\battleShipTests\battleShipTests.vcxproj", "{11CC6C97-30E0-C7CA-8F4A-1D0C08C0DBA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,14 @@ Global
 		{C953CAFE-1F56-46B4-B939-3A83406F7BFF}.Release|x64.Build.0 = Release|x64
 		{C953CAFE-1F56-46B4-B939-3A83406F7BFF}.Release|x86.ActiveCfg = Release|Win32
 		{C953CAFE-1F56-46B4-B939-3A83406F7BFF}.Release|x86.Build.0 = Release|Win32
+		{11CC6C97-30E0-C7CA-8F4A-1D0C08C0DBA6}.Debug|x64.ActiveCfg = Debug|x64
+		{11CC6C97-30E0-C7CA-8F4A-1D0C08C0DBA6}.Debug|x64.Build.0 = Debug|x64
+		{11CC6C97-30E0-C7CA-8F4A-1D0C08C0DBA6}.Debug|x86.ActiveCfg = Debug|Win32
+		{11CC6C97-30E0-C7CA-8F4A-1D0C08C0DBA6}.Debug|x86.Build.0 = Debug|Win32
+		{11CC6C97-30E0-C7CA-8F4A-1D0C08C0DBA6}.Release|x64.ActiveCfg = Release|x64
+		{11CC6C97-30E0-C7CA-8F4A-1D0C08C0DBA6}.Release|x64.Build.0 = Release|x64
+		{11CC6C97-30E0-C7CA-8F4A-1D0C08C0DBA6}.Release|x86.ActiveCfg = Release|Win32
+		{11CC6C97-30E0-C7CA-8F4A-1D0C08C0DBA6}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
