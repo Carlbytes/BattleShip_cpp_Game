@@ -1,7 +1,8 @@
 #include "CppUnitTest.h"
-#include "C:\CollegeStuff\Y3 Repos\SftDevGameProject\BattleShip\BattleShip\Board.hpp" // Adjust path if needed
-#include "C:\CollegeStuff\Y3 Repos\SftDevGameProject\BattleShip\BattleShip\Ship.hpp"  // Adjust path if needed
-// Note: You don't need to #include .cpp files, just headers.
+#include "Player.hpp"
+#include "Board.hpp"
+#include "Ship.hpp"
+#include "GameManager.hpp"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 

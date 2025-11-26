@@ -21,13 +21,16 @@
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="UnitTest1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="..\BattleShip\Board.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\BattleShip\Player.cpp">
+    <ClCompile Include="..\BattleShip\GameManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="UnitTest1.cpp">
+    <ClCompile Include="..\BattleShip\Player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
