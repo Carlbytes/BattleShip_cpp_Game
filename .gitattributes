@@ -1,13 +1,9 @@
-# Auto detect text files and perform LF normalization
-* text=auto
-
-# Ignore Inno Setup scripts from language stats
+# Ignore Inno Setup scripts
 *.iss linguist-vendored
 
-# Ignore the External dependencies (SFML) from stats
-External/** linguist-vendored
-Dependencies/** linguist-vendored
+# Ignore the External dependencies (SFML) no matter where they are
+**/External/** linguist-vendored
+**/Dependencies/** linguist-vendored
 
-# Ignore Visual Studio temporary files (just in case)
-*.vcxproj linguist-vendored
-*.sln linguist-vendored
+# Force any .h files to be counted as C++ (just in case)
+*.h linguist-language=C++
