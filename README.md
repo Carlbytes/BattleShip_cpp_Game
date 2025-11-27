@@ -4,6 +4,10 @@
   ![SFML](https://img.shields.io/badge/SFML-8CC445?style=for-the-badge&logo=sfml&logoColor=white)
   ![Visual Studio](https://img.shields.io/badge/Visual%20Studio-5C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white)
   ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+  ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+  ![CMake](https://img.shields.io/badge/CMake-%23008FBA.svg?style=for-the-badge&logo=cmake&logoColor=white)
+
+
 
   ![Repo Size](https://img.shields.io/github/repo-size/Carlbytes/BattleShip_cpp_Game?style=flat-square&labelColor=black)
   ![Last Commit](https://img.shields.io/github/last-commit/Carlbytes/BattleShip_cpp_Game?style=flat-square&labelColor=black)
@@ -12,11 +16,12 @@
 </div>
 
 
+<div align="center">
 ![Networking](https://img.shields.io/badge/Networking-TCP%2FIP-blue?style=flat&logo=socket.io)
 ![Installer](https://img.shields.io/badge/Installer-Inno_Setup-orange?style=flat)
 ![Design Pattern](https://img.shields.io/badge/Pattern-Singleton-red?style=flat)
 ![Unit Tests](https://img.shields.io/badge/Tests-MS_Native_Unit-purple?style=flat)
-
+</div>
 
 
 # 🚢 Battleship C++ Console Game
