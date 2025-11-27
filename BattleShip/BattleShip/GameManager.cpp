@@ -3,10 +3,12 @@
 #include <iostream> // For std::cout, std::cin
 #include <sstream> // For stringstream
 #include <fstream> // For file I/O
+#include <vector> // For storing IP history
 #include <cstdlib> // For rand()
 #include <ctime>   // For time()
 
 // --- Cross-Platform Input Handling (Local to this file) ---
+// Needed here so we can use arrow keys for firing
 #ifdef _WIN32
 #include <conio.h>
 #define KEY_UP 72
@@ -86,7 +88,7 @@ void GameManager::waitForKey() {
     std::cin.get();
 }
 
-//Method to get coordinates
+//Method to get coordinates (Backup method)
 bool GameManager::getCoordinates(int& x, int& y) {
     std::string line;
     std::getline(std::cin, line);
@@ -115,8 +117,13 @@ bool GameManager::tryConnect(sf::TcpSocket& socket, const std::string& ipString,
     //Connect to server IP address and port 
     std::cout << "Connecting to " << ipString << "...\n";
     std::optional<sf::IpAddress> serverIp = sf::IpAddress::resolve(ipString);
+
     if (!serverIp) return false;
-    if (socket.connect(serverIp.value(), port) == sf::Socket::Status::Done) return true;
+
+    //Set a timeout so we don't wait forever on dead IPs
+    sf::Time timeout = sf::seconds(2.0f);
+
+    if (socket.connect(serverIp.value(), port, timeout) == sf::Socket::Status::Done) return true;
     return false;
 }
 
@@ -129,8 +136,7 @@ void GameManager::runGame(bool isServer) {
     sf::TcpListener listener;
     sf::TcpSocket socket;
     unsigned short port = 54000;
-    std::string ipAddressString;
-    const std::string configFilename = "ip_config.txt";
+    const std::string historyFilename = "ip_history.txt";
 
     //Connection setup
 
@@ -168,27 +174,72 @@ void GameManager::runGame(bool isServer) {
         std::cin >> myName;
         std::cin.ignore(1000, '\n');
 
-        //Try to read last used IP from config file
-        std::ifstream configFileIn(configFilename);
-        //If file opens, read IP, else default to localhost
-        if (configFileIn.is_open()) { std::getline(configFileIn, ipAddressString); configFileIn.close(); }
-        else { ipAddressString = "127.0.0.1"; }
+        bool isConnected = false;
+        std::vector<std::string> ipHistory;
 
-        //Attempt connection to stored IP
-        bool isConnected = tryConnect(socket, ipAddressString, port);
-        //If that fails, prompt user for IP until successful connection
-        if (!isConnected) {
-            std::cout << "Enter Host IP: ";
-            std::cin >> ipAddressString;
-            isConnected = tryConnect(socket, ipAddressString, port);
-            if (isConnected) {
-                std::ofstream out(configFilename);
-                if (out.is_open()) { out << ipAddressString; out.close(); }
+        //Load IP history from file
+        std::ifstream historyFile(historyFilename);
+        if (historyFile.is_open()) {
+            std::string line;
+            while (std::getline(historyFile, line)) {
+                if (!line.empty()) {
+                    ipHistory.push_back(line);
+                }
+            }
+            historyFile.close();
+        }
+
+        //Try Auto-Connecting to History
+        if (!ipHistory.empty()) {
+            std::cout << "\nChecking saved IP addresses...\n";
+            for (const std::string& savedIp : ipHistory) {
+                if (tryConnect(socket, savedIp, port)) {
+                    isConnected = true;
+                    std::cout << "Success! Connected to " << savedIp << "\n";
+                    break;
+                }
+                else {
+                    std::cout << "Failed to connect to " << savedIp << "\n";
+                }
             }
         }
-        //If still not connected, exit
-        if (!isConnected) return;
-        std::cout << "Connected!\n";
+
+        //Manual Entry Fallback if history failed
+        if (!isConnected) {
+            std::cout << "\nCould not connect to any saved servers.\n";
+
+            while (!isConnected) {
+                std::string enteredIp;
+                std::cout << "Enter Host IP manually (or 'q' to quit): ";
+                std::cin >> enteredIp;
+
+                if (enteredIp == "q" || enteredIp == "Q") return;
+
+                isConnected = tryConnect(socket, enteredIp, port);
+
+                if (isConnected) {
+                    std::cout << "Connected!\n";
+
+                    //Save the new working IP (Avoid duplicates)
+                    bool alreadyExists = false;
+                    for (const auto& existing : ipHistory) {
+                        if (existing == enteredIp) alreadyExists = true;
+                    }
+
+                    if (!alreadyExists) {
+                        std::ofstream outFile(historyFilename, std::ios::app); //Append mode
+                        if (outFile.is_open()) {
+                            outFile << enteredIp << "\n";
+                            outFile.close();
+                            std::cout << "Saved " << enteredIp << " to history.\n";
+                        }
+                    }
+                }
+                else {
+                    std::cout << "Connection failed. Please try again.\n";
+                }
+            }
+        }
     }
 
     //Game Setup
@@ -287,23 +338,17 @@ void GameManager::runGame(bool isServer) {
             else if (action == 'f' || action == 'F') {
                 messageType = MessageType::FIRE_SHOT;
 
-                // --- NEW CURSOR BASED TARGETING ---
+                //Cursor based targeting
                 int cursorX = 0;
                 int cursorY = 0;
                 bool targetSelected = false;
 
                 while (!targetSelected) {
-                    // Valid if we haven't shot there yet (EMPTY or SHIP means we haven't hit/missed yet)
-                    // Note: On opponent board, SHIP state is hidden, so initially everything looks EMPTY.
-                    // If we previously fired, it would be HIT or MISS.
                     TileState ts = myPlayer.opponentBoard.getTileState(cursorX, cursorY);
                     bool validTarget = (ts == TileState::EMPTY || ts == TileState::SHIP);
 
-                    // Use the Board's cursor display (Reuse the ship placement visualizer!)
-                    // showShips=false (don't see enemy), size=1, horizontal=true (doesn't matter for 1x1)
                     myPlayer.opponentBoard.displayWithCursor(false, cursorX, cursorY, 1, true, validTarget);
 
-                    // UPDATED PROMPT HERE:
                     std::cout << "\nSelect where to fire: WASD/ARROWS to move, ENTER/SPACE to Shoot\n";
                     int key = getKeyPress();
 
@@ -321,7 +366,6 @@ void GameManager::runGame(bool isServer) {
                         break;
                     }
                 }
-                // ----------------------------------
 
                 packet << messageType << x_coord << y_coord;
                 if (socket.send(packet) != sf::Socket::Status::Done) break;
@@ -378,10 +422,16 @@ void GameManager::runGame(bool isServer) {
 
                     if (result == TileState::HIT) {
                         hitColor = myPlayer.myBoard.getTileColor(x_coord, y_coord);
-                        if (myPlayer.myBoard.isShipSunk(hitColor)) responseString = "You Sunk my " + getShipName(hitColor) + "!";
-                        else responseString = "You Hit!";
+                        if (myPlayer.myBoard.isShipSunk(hitColor)) {
+                            responseString = "You Sunk my " + getShipName(hitColor) + "!";
+                        }
+                        else {
+                            responseString = "You Hit!";
+                        }
                     }
-                    else responseString = "You Missed!";
+                    else {
+                        responseString = "You Missed!";
+                    }
 
                     int responseType = MessageType::GAME_RESULT;
                     packet.clear();
