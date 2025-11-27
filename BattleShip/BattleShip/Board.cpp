@@ -18,20 +18,26 @@ const std::string ANSI_CYAN = "\033[36m";
 const std::string ANSI_WHITE = "\033[37m";
 const std::string ANSI_BG_WHITE = "\033[47m";
 
+// Constructor initializes the board with empty tiles
 Board::Board()
 {
+	// Initialize all tiles to EMPTY state
     for (int x = 0; x < 10; ++x)
     {
+		// Initialize each tile in the grid
         for (int y = 0; y < 10; ++y)
         {
+			// Set each tile to EMPTY and color code to 0
             grid[x][y].state = TileState::EMPTY;
             grid[x][y].colorCode = 0;
         }
     }
 }
 
+// Maps color codes to ANSI color strings
 std::string Board::getColorString(int colorCode)
 {
+	// Returns ANSI color code based on ship color ID
     switch (colorCode) {
     case 1: return ANSI_CYAN;
     case 2: return ANSI_YELLOW;
@@ -56,6 +62,7 @@ int Board::getShipSize(int colorId)
     }
 }
 
+// Counts how many hits have been recorded for a specific ship color
 int Board::countHits(int colorId)
 {
     if (colorId == 0) return 0;
@@ -67,6 +74,7 @@ int Board::countHits(int colorId)
     return hits;
 }
 
+// Displays the board in the console
 void Board::display(bool showShips)
 {
     std::cout << "   0 1 2 3 4 5 6 7 8 9\n";
@@ -94,13 +102,16 @@ void Board::display(bool showShips)
                     }
                 }
 
+				// Display differently if sunk
                 if (sunk) std::cout << ANSI_RED << "O " << ANSI_RESET;
                 else      std::cout << ANSI_RED << "X " << ANSI_RESET;
             }
+			// Missed shot
             else if (t.state == TileState::MISS)
             {
                 std::cout << ANSI_WHITE << "O " << ANSI_RESET;
             }
+			// Ship tile
             else if (t.state == TileState::SHIP)
             {
                 if (showShips)
@@ -108,6 +119,7 @@ void Board::display(bool showShips)
                 else
                     std::cout << "~ ";
             }
+			//Empty tile
             else // EMPTY
             {
                 std::cout << "~ ";
@@ -117,6 +129,7 @@ void Board::display(bool showShips)
     }
 }
 
+// Displays the board with a cursor for ship placement
 void Board::displayWithCursor(bool showShips, int cursorX, int cursorY, int shipSize, bool horizontal, bool valid)
 {
     system(CLEAR_CMD);
@@ -134,8 +147,10 @@ void Board::displayWithCursor(bool showShips, int cursorX, int cursorY, int ship
         for (int x = 0; x < 10; ++x)
         {
             bool isCursor = false;
-            for (auto& p : ghostCells) {
-                if (p.first == x && p.second == y) {
+            for (auto& p : ghostCells) 
+            {
+                if (p.first == x && p.second == y)
+                {
                     isCursor = true;
                     break;
                 }
@@ -153,16 +168,18 @@ void Board::displayWithCursor(bool showShips, int cursorX, int cursorY, int ship
             }
             else
             {
-                // --- UPDATED VISUAL LOGIC ---
-                // This block now correctly shows previous Hits/Misses
+				// This block shows the normal tile state
 
+				//Checks  if the tile is a hit, miss, ship, or empty and displays accordingly
                 if (t.state == TileState::HIT)
                 {
                     bool sunk = false;
-                    if (showShips) {
+                    if (showShips) 
+                    {
                         sunk = isShipSunk(t.colorCode);
                     }
-                    else {
+                    else
+                    {
                         int totalSize = getShipSize(t.colorCode);
                         if (totalSize > 0 && countHits(t.colorCode) >= totalSize) sunk = true;
                     }
@@ -170,28 +187,33 @@ void Board::displayWithCursor(bool showShips, int cursorX, int cursorY, int ship
                     if (sunk) std::cout << ANSI_RED << "O " << ANSI_RESET;
                     else      std::cout << ANSI_RED << "X " << ANSI_RESET;
                 }
+				//Sets the color and symbol for a missed shot
                 else if (t.state == TileState::MISS)
                 {
                     std::cout << ANSI_WHITE << "O " << ANSI_RESET;
                 }
+				//Sets the color and symbol for a ship tile
                 else if (t.state == TileState::SHIP)
                 {
+					// Show ship only if allowed
                     if (showShips)
                         std::cout << getColorString(t.colorCode) << "# " << ANSI_RESET;
                     else
                         std::cout << "~ ";
                 }
-                else // EMPTY
+                else 
                 {
                     std::cout << "~ ";
                 }
-                // -----------------------------
+                
             }
         }
+		//turn to next line after each row
         std::cout << "\n";
     }
 }
 
+//checks if a shot hits a ship or misses and updates the tile state accordingly
 TileState Board::checkShot(int x, int y)
 {
     if (x < 0 || x >= 10 || y < 0 || y >= 10) return TileState::MISS;
@@ -209,6 +231,7 @@ TileState Board::checkShot(int x, int y)
     return grid[x][y].state;
 }
 
+//checks if a ship can be placed at the specified coordinates without overlapping or going out of bounds
 bool Board::isValidPlacement(int x, int y, int size, bool horizontal)
 {
     for (int i = 0; i < size; ++i)
@@ -222,6 +245,7 @@ bool Board::isValidPlacement(int x, int y, int size, bool horizontal)
     return true;
 }
 
+//places a ship on the board at the specified coordinates with the given size and orientation
 void Board::placeShip(int x, int y, int size, bool horizontal, int colorId)
 {
     if (!isValidPlacement(x, y, size, horizontal)) return;
@@ -235,6 +259,7 @@ void Board::placeShip(int x, int y, int size, bool horizontal, int colorId)
     }
 }
 
+//checks if all ships on the board have been sunk
 bool Board::isGameOver()
 {
     for (int x = 0; x < 10; ++x)
@@ -244,6 +269,7 @@ bool Board::isGameOver()
     return true;
 }
 
+//checks if a specific ship identified by colorId has been completely sunk
 bool Board::isShipSunk(int colorId)
 {
     if (colorId == 0) return false;
@@ -254,6 +280,7 @@ bool Board::isShipSunk(int colorId)
     return true;
 }
 
+// Getters
 int Board::getTileColor(int x, int y)
 {
     if (x >= 0 && x < 10 && y >= 0 && y < 10)
@@ -261,6 +288,7 @@ int Board::getTileColor(int x, int y)
     return 0;
 }
 
+//returns the state of the tile at the specified coordinates
 TileState Board::getTileState(int x, int y)
 {
     if (x >= 0 && x < 10 && y >= 0 && y < 10)
@@ -268,14 +296,17 @@ TileState Board::getTileState(int x, int y)
     return TileState::MISS;
 }
 
+//marks a hit on the opponent's board at the specified coordinates and records the ship's color ID
 void Board::markHit(int x, int y, int colorId)
 {
-    if (x >= 0 && x < 10 && y >= 0 && y < 10) {
+    if (x >= 0 && x < 10 && y >= 0 && y < 10) 
+    {
         grid[x][y].state = TileState::HIT;
         grid[x][y].colorCode = colorId; // Store the color so we can track the ship on opponent board
     }
 }
 
+//marks a miss on the opponent's board at the specified coordinates
 void Board::markMiss(int x, int y)
 {
     if (x >= 0 && x < 10 && y >= 0 && y < 10)

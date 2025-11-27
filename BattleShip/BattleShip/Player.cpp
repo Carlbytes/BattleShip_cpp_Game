@@ -1,7 +1,7 @@
 #include "Player.hpp"
 #include <iostream>
 
-// --- Cross-Platform Input Handling ---
+//  Cross-Platform Input Handling
 #ifdef _WIN32
 #include <conio.h>
 #define KEY_UP 72
@@ -12,15 +12,18 @@
 #define KEY_SPACE 32
 #define KEY_R 114
 
-int getKeyPress() {
+int getKeyPress()
+{
     int ch = _getch();
-    if (ch == 0 || ch == 224) {
+    if (ch == 0 || ch == 224)
+    {
         return _getch(); // Extended code
     }
     return ch;
 }
 
-void clearScreen() {
+void clearScreen()
+{
     system("cls");
 }
 
@@ -67,7 +70,7 @@ Player::Player()
     totalShipHealth = 14;
     hitsScored = 0;
 
-    // OOP: Instantiating specific classes into a polymorphic container
+    // Instantiating specific classes into a polymorphic container
     // This meets the requirement for Inheritance and Polymorphism
     fleet.push_back(std::make_unique<Battleship>());
     fleet.push_back(std::make_unique<Cruiser>());
@@ -87,7 +90,7 @@ void Player::setupBoard()
     int cursorY = 0;
     bool horizontal = true;
 
-    // OOP: Looping through objects using the Base Class pointer
+    // Looping through objects using the Base Class pointer
     // This demonstrates polymorphism (getName() behaves differently for each ship)
     for (size_t i = 0; i < fleet.size(); ++i)
     {
@@ -96,7 +99,7 @@ void Player::setupBoard()
         bool placed = false;
         while (!placed)
         {
-            // Use getters from the class (Encapsulation)
+            // Use getters from the class
             bool valid = myBoard.isValidPlacement(cursorX, cursorY, currentShip->getSize(), horizontal);
             myBoard.displayWithCursor(true, cursorX, cursorY, currentShip->getSize(), horizontal, valid);
 
@@ -154,7 +157,7 @@ void Player::setupBoard()
 
 void Player::drawGameScreen()
 {
-    // clearScreen(); // Uncomment if you want to clear the history
+    // clearScreen();
     std::cout << "--- YOUR BOARD (Your Ships) ---\n";
     myBoard.display(true);
     std::cout << "\n--- OPPONENT'S BOARD (Your Shots) ---\n";

@@ -1,7 +1,7 @@
 #pragma once
-#include "Board.hpp"
-#include "Ship.hpp"  // <--- NEW INCLUDE
-#include <vector>
+#include "Board.hpp"    // <--- For Board class
+#include "Ship.hpp"     // <--- For Ship base class and derived
+#include <vector>   // <--- For std::vector
 #include <memory>    // <--- For std::unique_ptr
 
 class Player

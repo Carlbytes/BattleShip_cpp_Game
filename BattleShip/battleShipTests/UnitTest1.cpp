@@ -8,9 +8,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace BattleshipTests
 {
-    // =========================================================
-    // 1. BOARD LOGIC TESTS (Placement, Shooting, Overlap)
-    // =========================================================
+	//Board logic tests
     TEST_CLASS(BoardTests)
     {
     public:
@@ -87,9 +85,7 @@ namespace BattleshipTests
         }
     };
 
-    // =========================================================
-    // 2. PLAYER LOGIC TESTS (Fleet, Scoring)
-    // =========================================================
+	//Player logic tests here for initialization and scoring
     TEST_CLASS(PlayerTests)
     {
     public:
@@ -119,9 +115,7 @@ namespace BattleshipTests
         }
     };
 
-    // =========================================================
-    // 3. SHIP LOGIC TESTS (Polymorphism)
-    // =========================================================
+	//Ship polymorphism tests for all ship types
     TEST_CLASS(ShipTests)
     {
     public:
