@@ -197,11 +197,9 @@ External/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Image.cpp.o: \
  /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/External/SFML/include/SFML/System/Exception.hpp \
  /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/External/SFML/include/SFML/System/InputStream.hpp \
  /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/External/SFML/src/SFML/System/Utils.hpp \
- /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/External/SFML/extlibs/headers/qoi/qoi.h \
- /usr/include/c++/13/stdlib.h /usr/include/string.h \
- /usr/include/strings.h \
  /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/External/SFML/extlibs/headers/stb_image/stb_image.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
+ /usr/include/c++/13/stdlib.h /usr/include/string.h \
+ /usr/include/strings.h /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
@@ -242,11 +240,7 @@ External/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Image.cpp.o: \
  /usr/include/c++/13/bits/uniform_int_dist.h \
  /usr/include/c++/13/bits/stl_tempbuf.h \
  /usr/include/c++/13/pstl/glue_algorithm_defs.h \
- /usr/include/c++/13/pstl/execution_defs.h /usr/include/c++/13/array \
- /usr/include/c++/13/compare /usr/include/c++/13/fstream \
- /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
- /usr/include/c++/13/bits/fstream.tcc /usr/include/c++/13/memory \
+ /usr/include/c++/13/pstl/execution_defs.h /usr/include/c++/13/memory \
  /usr/include/c++/13/bits/stl_raw_storage_iter.h \
  /usr/include/c++/13/bits/align.h \
  /usr/include/c++/13/bits/shared_ptr_atomic.h \

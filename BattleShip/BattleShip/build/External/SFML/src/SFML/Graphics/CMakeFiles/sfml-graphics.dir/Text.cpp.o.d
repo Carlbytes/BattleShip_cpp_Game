@@ -229,66 +229,16 @@ External/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Text.cpp.o: \
  /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/External/SFML/include/SFML/System/String.hpp \
  /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/External/SFML/include/SFML/System/Utf.hpp \
  /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/External/SFML/include/SFML/System/Utf.inl \
- /usr/include/c++/13/iterator /usr/include/c++/13/bits/stream_iterator.h \
  /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/External/SFML/include/SFML/System/String.inl \
- /usr/include/c++/13/functional /usr/include/c++/13/bits/std_function.h \
- /usr/include/c++/13/bits/stl_algo.h \
+ /usr/include/c++/13/iterator /usr/include/c++/13/bits/stream_iterator.h \
+ /usr/include/c++/13/algorithm /usr/include/c++/13/bits/stl_algo.h \
  /usr/include/c++/13/bits/algorithmfwd.h \
  /usr/include/c++/13/bits/stl_heap.h \
  /usr/include/c++/13/bits/uniform_int_dist.h \
- /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/_deps/sheenbidi-src/Headers/SheenBidi/SheenBidi.h \
- /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/_deps/sheenbidi-src/Headers/SheenBidi/SBAlgorithm.h \
- /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/_deps/sheenbidi-src/Headers/SheenBidi/SBBase.h \
- /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/_deps/sheenbidi-src/Headers/SheenBidi/SBBidiType.h \
- /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/_deps/sheenbidi-src/Headers/SheenBidi/SBCodepointSequence.h \
- /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/_deps/sheenbidi-src/Headers/SheenBidi/SBCodepoint.h \
- /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/_deps/sheenbidi-src/Headers/SheenBidi/SBGeneralCategory.h \
- /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/_deps/sheenbidi-src/Headers/SheenBidi/SBScript.h \
- /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/_deps/sheenbidi-src/Headers/SheenBidi/SBParagraph.h \
- /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/_deps/sheenbidi-src/Headers/SheenBidi/SBLine.h \
- /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/_deps/sheenbidi-src/Headers/SheenBidi/SBRun.h \
- /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/_deps/sheenbidi-src/Headers/SheenBidi/SBMirrorLocator.h \
- /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/_deps/sheenbidi-src/Headers/SheenBidi/SBScriptLocator.h \
- /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/_deps/sheenbidi-src/Headers/SheenBidi/SBVersion.h \
- /usr/include/c++/13/algorithm \
  /usr/include/c++/13/pstl/glue_algorithm_defs.h \
- /usr/include/harfbuzz/hb-ft.h /usr/include/harfbuzz/hb.h \
- /usr/include/harfbuzz/hb-blob.h /usr/include/harfbuzz/hb-common.h \
- /usr/include/harfbuzz/hb-buffer.h /usr/include/harfbuzz/hb-unicode.h \
- /usr/include/harfbuzz/hb-font.h /usr/include/harfbuzz/hb-face.h \
- /usr/include/harfbuzz/hb-map.h /usr/include/harfbuzz/hb-set.h \
- /usr/include/harfbuzz/hb-draw.h /usr/include/harfbuzz/hb-paint.h \
- /usr/include/harfbuzz/hb-deprecated.h /usr/include/harfbuzz/hb-shape.h \
- /usr/include/harfbuzz/hb-shape-plan.h /usr/include/harfbuzz/hb-style.h \
- /usr/include/harfbuzz/hb-version.h /usr/include/freetype2/ft2build.h \
- /usr/include/freetype2/freetype/config/ftheader.h \
- /usr/include/freetype2/freetype/freetype.h \
- /usr/include/freetype2/freetype/config/ftconfig.h \
- /usr/include/freetype2/freetype/config/ftoption.h \
- /usr/include/freetype2/freetype/config/ftstdlib.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
- /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
- /usr/include/x86_64-linux-gnu/bits/local_lim.h \
- /usr/include/linux/limits.h \
- /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
- /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
- /usr/include/x86_64-linux-gnu/bits/uio_lim.h /usr/include/string.h \
- /usr/include/strings.h /usr/include/c++/13/stdlib.h \
- /usr/include/setjmp.h \
- /usr/include/freetype2/freetype/config/integer-types.h \
- /usr/include/freetype2/freetype/config/public-macros.h \
- /usr/include/freetype2/freetype/config/mac-support.h \
- /usr/include/freetype2/freetype/fttypes.h \
- /usr/include/freetype2/freetype/ftsystem.h \
- /usr/include/freetype2/freetype/ftimage.h \
- /usr/include/freetype2/freetype/fterrors.h \
- /usr/include/freetype2/freetype/ftmoderr.h \
- /usr/include/freetype2/freetype/fterrdef.h /usr/include/c++/13/mutex \
- /usr/include/c++/13/bits/std_mutex.h \
- /usr/include/c++/13/bits/unique_lock.h /usr/include/c++/13/utility \
- /usr/include/c++/13/bits/stl_relops.h /usr/include/c++/13/cmath \
- /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+ /usr/include/c++/13/utility /usr/include/c++/13/bits/stl_relops.h \
+ /usr/include/c++/13/cmath /usr/include/math.h \
+ /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \

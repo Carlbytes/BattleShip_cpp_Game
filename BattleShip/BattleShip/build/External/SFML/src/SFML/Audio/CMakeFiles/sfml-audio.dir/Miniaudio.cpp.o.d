@@ -1,7 +1,6 @@
 External/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Miniaudio.cpp.o: \
  /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/External/SFML/src/SFML/Audio/Miniaudio.cpp \
  /usr/include/stdc-predef.h \
- /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/External/SFML/extlibs/headers/miniaudio/miniaudio.c \
  /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/External/SFML/extlibs/headers/miniaudio/miniaudio.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \

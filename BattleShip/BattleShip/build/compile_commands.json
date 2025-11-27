@@ -1,8 +1,0 @@
-[
-{
-  "directory": "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/_deps/sheenbidi-build",
-  "command": "/usr/bin/cc -DSB_CONFIG_UNITY -I/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/_deps/sheenbidi-src/Headers -I/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/_deps/sheenbidi-src/Source  -o CMakeFiles/SheenBidi.dir/Source/SheenBidi.c.o -c /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/_deps/sheenbidi-src/Source/SheenBidi.c",
-  "file": "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/_deps/sheenbidi-src/Source/SheenBidi.c",
-  "output": "_deps/sheenbidi-build/CMakeFiles/SheenBidi.dir/Source/SheenBidi.c.o"
-}
-]

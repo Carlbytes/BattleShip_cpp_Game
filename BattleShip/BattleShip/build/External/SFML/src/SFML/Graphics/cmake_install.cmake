@@ -46,16 +46,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "devel" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/External/SFML/lib/libsfml-graphics.a")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/External/SFML/src/SFML/Graphics/tools/pkg-config/sfml-graphics.pc")
-endif()
-
 if(CMAKE_INSTALL_COMPONENT STREQUAL "devel" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/SFML" TYPE FILE FILES "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/External/SFML/src/SFML/Graphics/SFMLGraphicsDependencies.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/_deps/sheenbidi-build/cmake_install.cmake")
 endif()
 

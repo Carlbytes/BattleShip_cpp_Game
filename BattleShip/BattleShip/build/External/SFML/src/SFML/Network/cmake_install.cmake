@@ -46,7 +46,3 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "devel" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/External/SFML/lib/libsfml-network.a")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/External/SFML/src/SFML/Network/tools/pkg-config/sfml-network.pc")
-endif()
-

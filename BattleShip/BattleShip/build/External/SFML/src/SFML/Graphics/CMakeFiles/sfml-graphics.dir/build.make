@@ -478,8 +478,7 @@ sfml__graphics_OBJECTS = \
 "CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.o"
 
 # External object files for target sfml-graphics
-sfml__graphics_EXTERNAL_OBJECTS = \
-"/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/_deps/sheenbidi-build/CMakeFiles/SheenBidi.dir/Source/SheenBidi.c.o"
+sfml__graphics_EXTERNAL_OBJECTS =
 
 External/SFML/lib/libsfml-graphics.a: External/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/BlendMode.cpp.o
 External/SFML/lib/libsfml-graphics.a: External/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Font.cpp.o
@@ -508,7 +507,6 @@ External/SFML/lib/libsfml-graphics.a: External/SFML/src/SFML/Graphics/CMakeFiles
 External/SFML/lib/libsfml-graphics.a: External/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.o
 External/SFML/lib/libsfml-graphics.a: External/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.o
 External/SFML/lib/libsfml-graphics.a: External/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.o
-External/SFML/lib/libsfml-graphics.a: _deps/sheenbidi-build/CMakeFiles/SheenBidi.dir/Source/SheenBidi.c.o
 External/SFML/lib/libsfml-graphics.a: External/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/build.make
 External/SFML/lib/libsfml-graphics.a: External/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Linking CXX static library ../../../lib/libsfml-graphics.a"

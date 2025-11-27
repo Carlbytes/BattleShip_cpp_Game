@@ -61,8 +61,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-atazEV"
-      binary: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-atazEV"
+      source: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-qeTrvH"
+      binary: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-qeTrvH"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -71,13 +71,13 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-atazEV'
+        Change Dir: '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-qeTrvH'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1b340/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_1b340.dir/build.make CMakeFiles/cmTC_1b340.dir/build
-        gmake[1]: Entering directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-atazEV'
-        Building C object CMakeFiles/cmTC_1b340.dir/CMakeCCompilerABI.c.o
-        /usr/bin/cc   -v -o CMakeFiles/cmTC_1b340.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a6602/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_a6602.dir/build.make CMakeFiles/cmTC_a6602.dir/build
+        gmake[1]: Entering directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-qeTrvH'
+        Building C object CMakeFiles/cmTC_a6602.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -v -o CMakeFiles/cmTC_a6602.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=/usr/bin/cc
         OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
@@ -87,8 +87,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1b340.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1b340.dir/'
-         /usr/libexec/gcc/x86_64-linux-gnu/13/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_1b340.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccYRZSjl.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a6602.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a6602.dir/'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_a6602.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccSmkESH.s
         GNU C17 (Ubuntu 13.3.0-6ubuntu2~24.04) version 13.3.0 (x86_64-linux-gnu)
         	compiled by GNU C version 13.3.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
         
@@ -105,15 +105,15 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: 38987c28e967c64056a6454abdef726e
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1b340.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1b340.dir/'
-         as -v --64 -o CMakeFiles/cmTC_1b340.dir/CMakeCCompilerABI.c.o /tmp/ccYRZSjl.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a6602.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a6602.dir/'
+         as -v --64 -o CMakeFiles/cmTC_a6602.dir/CMakeCCompilerABI.c.o /tmp/ccSmkESH.s
         GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42
         COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1b340.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1b340.dir/CMakeCCompilerABI.c.'
-        Linking C executable cmTC_1b340
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1b340.dir/link.txt --verbose=1
-        /usr/bin/cc  -v CMakeFiles/cmTC_1b340.dir/CMakeCCompilerABI.c.o -o cmTC_1b340 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a6602.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a6602.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_a6602
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a6602.dir/link.txt --verbose=1
+        /usr/bin/cc  -v CMakeFiles/cmTC_a6602.dir/CMakeCCompilerABI.c.o -o cmTC_a6602 
         Using built-in specs.
         COLLECT_GCC=/usr/bin/cc
         COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper
@@ -126,10 +126,10 @@ events:
         gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) 
         COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1b340' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_1b340.'
-         /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccaF5aNb.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_1b340 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_1b340.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1b340' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_1b340.'
-        gmake[1]: Leaving directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-atazEV'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a6602' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_a6602.'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccie031A.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_a6602 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_a6602.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a6602' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_a6602.'
+        gmake[1]: Leaving directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-qeTrvH'
         
       exitCode: 0
   -
@@ -163,13 +163,13 @@ events:
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-atazEV']
+        ignore line: [Change Dir: '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-qeTrvH']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1b340/fast]
-        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_1b340.dir/build.make CMakeFiles/cmTC_1b340.dir/build]
-        ignore line: [gmake[1]: Entering directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-atazEV']
-        ignore line: [Building C object CMakeFiles/cmTC_1b340.dir/CMakeCCompilerABI.c.o]
-        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_1b340.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a6602/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_a6602.dir/build.make CMakeFiles/cmTC_a6602.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-qeTrvH']
+        ignore line: [Building C object CMakeFiles/cmTC_a6602.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_a6602.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/cc]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
@@ -179,8 +179,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1b340.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1b340.dir/']
-        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_1b340.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccYRZSjl.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a6602.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a6602.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_a6602.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccSmkESH.s]
         ignore line: [GNU C17 (Ubuntu 13.3.0-6ubuntu2~24.04) version 13.3.0 (x86_64-linux-gnu)]
         ignore line: [	compiled by GNU C version 13.3.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
         ignore line: []
@@ -197,15 +197,15 @@ events:
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 38987c28e967c64056a6454abdef726e]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1b340.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1b340.dir/']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_1b340.dir/CMakeCCompilerABI.c.o /tmp/ccYRZSjl.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a6602.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a6602.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_a6602.dir/CMakeCCompilerABI.c.o /tmp/ccSmkESH.s]
         ignore line: [GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42]
         ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1b340.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1b340.dir/CMakeCCompilerABI.c.']
-        ignore line: [Linking C executable cmTC_1b340]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1b340.dir/link.txt --verbose=1]
-        ignore line: [/usr/bin/cc  -v CMakeFiles/cmTC_1b340.dir/CMakeCCompilerABI.c.o -o cmTC_1b340 ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a6602.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a6602.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_a6602]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a6602.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/cc  -v CMakeFiles/cmTC_a6602.dir/CMakeCCompilerABI.c.o -o cmTC_a6602 ]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/cc]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper]
@@ -218,13 +218,13 @@ events:
         ignore line: [gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) ]
         ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1b340' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_1b340.']
-        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccaF5aNb.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_1b340 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_1b340.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a6602' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_a6602.']
+        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccie031A.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_a6602 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_a6602.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
           arg [/usr/libexec/gcc/x86_64-linux-gnu/13/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccaF5aNb.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccie031A.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -242,7 +242,7 @@ events:
           arg [-znow] ==> ignore
           arg [-zrelro] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_1b340] ==> ignore
+          arg [cmTC_a6602] ==> ignore
           arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o]
@@ -254,7 +254,7 @@ events:
           arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
           arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
           arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../..]
-          arg [CMakeFiles/cmTC_1b340.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_a6602.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lgcc] ==> lib [gcc]
           arg [--push-state] ==> ignore
           arg [--as-needed] ==> ignore
@@ -294,8 +294,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-DG38AM"
-      binary: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-DG38AM"
+      source: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-LTh8fW"
+      binary: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-LTh8fW"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -304,13 +304,13 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-DG38AM'
+        Change Dir: '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-LTh8fW'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1c749/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_1c749.dir/build.make CMakeFiles/cmTC_1c749.dir/build
-        gmake[1]: Entering directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-DG38AM'
-        Building CXX object CMakeFiles/cmTC_1c749.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/bin/c++   -v -o CMakeFiles/cmTC_1c749.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_0c859/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_0c859.dir/build.make CMakeFiles/cmTC_0c859.dir/build
+        gmake[1]: Entering directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-LTh8fW'
+        Building CXX object CMakeFiles/cmTC_0c859.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -v -o CMakeFiles/cmTC_0c859.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
@@ -320,8 +320,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1c749.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1c749.dir/'
-         /usr/libexec/gcc/x86_64-linux-gnu/13/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_1c749.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/cczTLVp0.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0c859.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0c859.dir/'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_0c859.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccVDXeBR.s
         GNU C++17 (Ubuntu 13.3.0-6ubuntu2~24.04) version 13.3.0 (x86_64-linux-gnu)
         	compiled by GNU C version 13.3.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
         
@@ -342,15 +342,15 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: c81c05345ce537099dafd5580045814a
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1c749.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1c749.dir/'
-         as -v --64 -o CMakeFiles/cmTC_1c749.dir/CMakeCXXCompilerABI.cpp.o /tmp/cczTLVp0.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0c859.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0c859.dir/'
+         as -v --64 -o CMakeFiles/cmTC_0c859.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccVDXeBR.s
         GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42
         COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1c749.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1c749.dir/CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_1c749
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1c749.dir/link.txt --verbose=1
-        /usr/bin/c++  -v CMakeFiles/cmTC_1c749.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_1c749 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0c859.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0c859.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_0c859
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0c859.dir/link.txt --verbose=1
+        /usr/bin/c++  -v CMakeFiles/cmTC_0c859.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_0c859 
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper
@@ -363,10 +363,10 @@ events:
         gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) 
         COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1c749' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_1c749.'
-         /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccV6VEGh.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_1c749 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_1c749.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1c749' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_1c749.'
-        gmake[1]: Leaving directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-DG38AM'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0c859' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_0c859.'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKqmlxA.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_0c859 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_0c859.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0c859' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_0c859.'
+        gmake[1]: Leaving directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-LTh8fW'
         
       exitCode: 0
   -
@@ -406,13 +406,13 @@ events:
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-DG38AM']
+        ignore line: [Change Dir: '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-LTh8fW']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1c749/fast]
-        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_1c749.dir/build.make CMakeFiles/cmTC_1c749.dir/build]
-        ignore line: [gmake[1]: Entering directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-DG38AM']
-        ignore line: [Building CXX object CMakeFiles/cmTC_1c749.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_1c749.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_0c859/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_0c859.dir/build.make CMakeFiles/cmTC_0c859.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-LTh8fW']
+        ignore line: [Building CXX object CMakeFiles/cmTC_0c859.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_0c859.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
@@ -422,8 +422,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1c749.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1c749.dir/']
-        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_1c749.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/cczTLVp0.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0c859.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0c859.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_0c859.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccVDXeBR.s]
         ignore line: [GNU C++17 (Ubuntu 13.3.0-6ubuntu2~24.04) version 13.3.0 (x86_64-linux-gnu)]
         ignore line: [	compiled by GNU C version 13.3.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
         ignore line: []
@@ -444,15 +444,15 @@ events:
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: c81c05345ce537099dafd5580045814a]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1c749.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1c749.dir/']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_1c749.dir/CMakeCXXCompilerABI.cpp.o /tmp/cczTLVp0.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0c859.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0c859.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_0c859.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccVDXeBR.s]
         ignore line: [GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42]
         ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1c749.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_1c749.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_1c749]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1c749.dir/link.txt --verbose=1]
-        ignore line: [/usr/bin/c++  -v CMakeFiles/cmTC_1c749.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_1c749 ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0c859.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0c859.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_0c859]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0c859.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/c++  -v CMakeFiles/cmTC_0c859.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_0c859 ]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper]
@@ -465,13 +465,13 @@ events:
         ignore line: [gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04) ]
         ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1c749' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_1c749.']
-        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccV6VEGh.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_1c749 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_1c749.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0c859' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_0c859.']
+        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKqmlxA.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_0c859 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_0c859.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
           arg [/usr/libexec/gcc/x86_64-linux-gnu/13/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccV6VEGh.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccKqmlxA.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -489,7 +489,7 @@ events:
           arg [-znow] ==> ignore
           arg [-zrelro] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_1c749] ==> ignore
+          arg [cmTC_0c859] ==> ignore
           arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o]
@@ -501,7 +501,7 @@ events:
           arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
           arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
           arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../..]
-          arg [CMakeFiles/cmTC_1c749.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_0c859.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -528,6 +528,10 @@ events:
         implicit fwks: []
       
       
+...
+
+---
+events:
   -
     kind: "try_compile-v1"
     backtrace:
@@ -539,8 +543,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-uLlOrk"
-      binary: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-uLlOrk"
+      source: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-51N7nx"
+      binary: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-51N7nx"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -551,17 +555,17 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-uLlOrk'
+        Change Dir: '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-51N7nx'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_43030/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_43030.dir/build.make CMakeFiles/cmTC_43030.dir/build
-        gmake[1]: Entering directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-uLlOrk'
-        Building C object CMakeFiles/cmTC_43030.dir/src.c.o
-        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_43030.dir/src.c.o -c /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-uLlOrk/src.c
-        Linking C executable cmTC_43030
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_43030.dir/link.txt --verbose=1
-        /usr/bin/cc CMakeFiles/cmTC_43030.dir/src.c.o -o cmTC_43030 
-        gmake[1]: Leaving directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-uLlOrk'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_5ac65/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_5ac65.dir/build.make CMakeFiles/cmTC_5ac65.dir/build
+        gmake[1]: Entering directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-51N7nx'
+        Building C object CMakeFiles/cmTC_5ac65.dir/src.c.o
+        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_5ac65.dir/src.c.o -c /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-51N7nx/src.c
+        Linking C executable cmTC_5ac65
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ac65.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_5ac65.dir/src.c.o -o cmTC_5ac65 
+        gmake[1]: Leaving directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-51N7nx'
         
       exitCode: 0
   -
@@ -573,8 +577,8 @@ events:
     checks:
       - "Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so"
     directories:
-      source: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-RGUWQL"
-      binary: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-RGUWQL"
+      source: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-i0VCW7"
+      binary: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-i0VCW7"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -585,17 +589,17 @@ events:
       variable: "X11_LIB_X11_SOLO"
       cached: true
       stdout: |
-        Change Dir: '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-RGUWQL'
+        Change Dir: '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-i0VCW7'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_65843/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_65843.dir/build.make CMakeFiles/cmTC_65843.dir/build
-        gmake[1]: Entering directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-RGUWQL'
-        Building C object CMakeFiles/cmTC_65843.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay -o CMakeFiles/cmTC_65843.dir/CheckFunctionExists.c.o -c /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-RGUWQL/CheckFunctionExists.c
-        Linking C executable cmTC_65843
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_65843.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=XOpenDisplay CMakeFiles/cmTC_65843.dir/CheckFunctionExists.c.o -o cmTC_65843  /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so 
-        gmake[1]: Leaving directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-RGUWQL'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_61030/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_61030.dir/build.make CMakeFiles/cmTC_61030.dir/build
+        gmake[1]: Entering directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-i0VCW7'
+        Building C object CMakeFiles/cmTC_61030.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay -o CMakeFiles/cmTC_61030.dir/CheckFunctionExists.c.o -c /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-i0VCW7/CheckFunctionExists.c
+        Linking C executable cmTC_61030
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_61030.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=XOpenDisplay CMakeFiles/cmTC_61030.dir/CheckFunctionExists.c.o -o cmTC_61030  /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so 
+        gmake[1]: Leaving directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-i0VCW7'
         
       exitCode: 0
   -
@@ -607,8 +611,8 @@ events:
     checks:
       - "Looking for gethostbyname"
     directories:
-      source: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-I4IwXg"
-      binary: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-I4IwXg"
+      source: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-T9sobj"
+      binary: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-T9sobj"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -619,17 +623,17 @@ events:
       variable: "CMAKE_HAVE_GETHOSTBYNAME"
       cached: true
       stdout: |
-        Change Dir: '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-I4IwXg'
+        Change Dir: '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-T9sobj'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_2e44e/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_2e44e.dir/build.make CMakeFiles/cmTC_2e44e.dir/build
-        gmake[1]: Entering directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-I4IwXg'
-        Building C object CMakeFiles/cmTC_2e44e.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname -o CMakeFiles/cmTC_2e44e.dir/CheckFunctionExists.c.o -c /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-I4IwXg/CheckFunctionExists.c
-        Linking C executable cmTC_2e44e
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2e44e.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=gethostbyname CMakeFiles/cmTC_2e44e.dir/CheckFunctionExists.c.o -o cmTC_2e44e 
-        gmake[1]: Leaving directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-I4IwXg'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_32663/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_32663.dir/build.make CMakeFiles/cmTC_32663.dir/build
+        gmake[1]: Entering directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-T9sobj'
+        Building C object CMakeFiles/cmTC_32663.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname -o CMakeFiles/cmTC_32663.dir/CheckFunctionExists.c.o -c /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-T9sobj/CheckFunctionExists.c
+        Linking C executable cmTC_32663
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_32663.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=gethostbyname CMakeFiles/cmTC_32663.dir/CheckFunctionExists.c.o -o cmTC_32663 
+        gmake[1]: Leaving directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-T9sobj'
         
       exitCode: 0
   -
@@ -641,8 +645,8 @@ events:
     checks:
       - "Looking for connect"
     directories:
-      source: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-phDYlj"
-      binary: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-phDYlj"
+      source: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-wp6wZC"
+      binary: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-wp6wZC"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -653,17 +657,17 @@ events:
       variable: "CMAKE_HAVE_CONNECT"
       cached: true
       stdout: |
-        Change Dir: '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-phDYlj'
+        Change Dir: '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-wp6wZC'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_cf20c/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_cf20c.dir/build.make CMakeFiles/cmTC_cf20c.dir/build
-        gmake[1]: Entering directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-phDYlj'
-        Building C object CMakeFiles/cmTC_cf20c.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect -o CMakeFiles/cmTC_cf20c.dir/CheckFunctionExists.c.o -c /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-phDYlj/CheckFunctionExists.c
-        Linking C executable cmTC_cf20c
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cf20c.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=connect CMakeFiles/cmTC_cf20c.dir/CheckFunctionExists.c.o -o cmTC_cf20c 
-        gmake[1]: Leaving directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-phDYlj'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d0538/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_d0538.dir/build.make CMakeFiles/cmTC_d0538.dir/build
+        gmake[1]: Entering directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-wp6wZC'
+        Building C object CMakeFiles/cmTC_d0538.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect -o CMakeFiles/cmTC_d0538.dir/CheckFunctionExists.c.o -c /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-wp6wZC/CheckFunctionExists.c
+        Linking C executable cmTC_d0538
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d0538.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=connect CMakeFiles/cmTC_d0538.dir/CheckFunctionExists.c.o -o cmTC_d0538 
+        gmake[1]: Leaving directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-wp6wZC'
         
       exitCode: 0
   -
@@ -675,8 +679,8 @@ events:
     checks:
       - "Looking for remove"
     directories:
-      source: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-7c4s6p"
-      binary: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-7c4s6p"
+      source: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-vxnhJQ"
+      binary: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-vxnhJQ"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -687,17 +691,17 @@ events:
       variable: "CMAKE_HAVE_REMOVE"
       cached: true
       stdout: |
-        Change Dir: '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-7c4s6p'
+        Change Dir: '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-vxnhJQ'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_dc835/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_dc835.dir/build.make CMakeFiles/cmTC_dc835.dir/build
-        gmake[1]: Entering directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-7c4s6p'
-        Building C object CMakeFiles/cmTC_dc835.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove -o CMakeFiles/cmTC_dc835.dir/CheckFunctionExists.c.o -c /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-7c4s6p/CheckFunctionExists.c
-        Linking C executable cmTC_dc835
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dc835.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=remove CMakeFiles/cmTC_dc835.dir/CheckFunctionExists.c.o -o cmTC_dc835 
-        gmake[1]: Leaving directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-7c4s6p'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_df93d/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_df93d.dir/build.make CMakeFiles/cmTC_df93d.dir/build
+        gmake[1]: Entering directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-vxnhJQ'
+        Building C object CMakeFiles/cmTC_df93d.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove -o CMakeFiles/cmTC_df93d.dir/CheckFunctionExists.c.o -c /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-vxnhJQ/CheckFunctionExists.c
+        Linking C executable cmTC_df93d
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_df93d.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=remove CMakeFiles/cmTC_df93d.dir/CheckFunctionExists.c.o -o cmTC_df93d 
+        gmake[1]: Leaving directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-vxnhJQ'
         
       exitCode: 0
   -
@@ -709,8 +713,8 @@ events:
     checks:
       - "Looking for shmat"
     directories:
-      source: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-cCiDmB"
-      binary: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-cCiDmB"
+      source: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-DDTzNE"
+      binary: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-DDTzNE"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -721,17 +725,17 @@ events:
       variable: "CMAKE_HAVE_SHMAT"
       cached: true
       stdout: |
-        Change Dir: '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-cCiDmB'
+        Change Dir: '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-DDTzNE'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f4b64/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_f4b64.dir/build.make CMakeFiles/cmTC_f4b64.dir/build
-        gmake[1]: Entering directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-cCiDmB'
-        Building C object CMakeFiles/cmTC_f4b64.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat -o CMakeFiles/cmTC_f4b64.dir/CheckFunctionExists.c.o -c /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-cCiDmB/CheckFunctionExists.c
-        Linking C executable cmTC_f4b64
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f4b64.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=shmat CMakeFiles/cmTC_f4b64.dir/CheckFunctionExists.c.o -o cmTC_f4b64 
-        gmake[1]: Leaving directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-cCiDmB'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_521dd/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_521dd.dir/build.make CMakeFiles/cmTC_521dd.dir/build
+        gmake[1]: Entering directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-DDTzNE'
+        Building C object CMakeFiles/cmTC_521dd.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat -o CMakeFiles/cmTC_521dd.dir/CheckFunctionExists.c.o -c /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-DDTzNE/CheckFunctionExists.c
+        Linking C executable cmTC_521dd
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_521dd.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=shmat CMakeFiles/cmTC_521dd.dir/CheckFunctionExists.c.o -o cmTC_521dd 
+        gmake[1]: Leaving directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-DDTzNE'
         
       exitCode: 0
   -
@@ -743,8 +747,8 @@ events:
     checks:
       - "Looking for IceConnectionNumber in ICE"
     directories:
-      source: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-1opb1V"
-      binary: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-1opb1V"
+      source: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-QcPwiL"
+      binary: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-QcPwiL"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -755,17 +759,17 @@ events:
       variable: "CMAKE_LIB_ICE_HAS_ICECONNECTIONNUMBER"
       cached: true
       stdout: |
-        Change Dir: '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-1opb1V'
+        Change Dir: '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-QcPwiL'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1ba6f/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_1ba6f.dir/build.make CMakeFiles/cmTC_1ba6f.dir/build
-        gmake[1]: Entering directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-1opb1V'
-        Building C object CMakeFiles/cmTC_1ba6f.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber -o CMakeFiles/cmTC_1ba6f.dir/CheckFunctionExists.c.o -c /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-1opb1V/CheckFunctionExists.c
-        Linking C executable cmTC_1ba6f
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1ba6f.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=IceConnectionNumber CMakeFiles/cmTC_1ba6f.dir/CheckFunctionExists.c.o -o cmTC_1ba6f  -lICE 
-        gmake[1]: Leaving directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-1opb1V'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e7873/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_e7873.dir/build.make CMakeFiles/cmTC_e7873.dir/build
+        gmake[1]: Entering directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-QcPwiL'
+        Building C object CMakeFiles/cmTC_e7873.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber -o CMakeFiles/cmTC_e7873.dir/CheckFunctionExists.c.o -c /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-QcPwiL/CheckFunctionExists.c
+        Linking C executable cmTC_e7873
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e7873.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=IceConnectionNumber CMakeFiles/cmTC_e7873.dir/CheckFunctionExists.c.o -o cmTC_e7873  -lICE 
+        gmake[1]: Leaving directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-QcPwiL'
         
       exitCode: 0
   -
@@ -777,8 +781,8 @@ events:
     checks:
       - "Performing Test ATOMIC_TEST"
     directories:
-      source: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-tSkrYH"
-      binary: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-tSkrYH"
+      source: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-t0K22F"
+      binary: "/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-t0K22F"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -789,17 +793,17 @@ events:
       variable: "ATOMIC_TEST"
       cached: true
       stdout: |
-        Change Dir: '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-tSkrYH'
+        Change Dir: '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-t0K22F'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_9a262/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_9a262.dir/build.make CMakeFiles/cmTC_9a262.dir/build
-        gmake[1]: Entering directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-tSkrYH'
-        Building CXX object CMakeFiles/cmTC_9a262.dir/src.cxx.o
-        /usr/bin/c++ -DATOMIC_TEST  -std=gnu++17 -o CMakeFiles/cmTC_9a262.dir/src.cxx.o -c /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-tSkrYH/src.cxx
-        Linking CXX executable cmTC_9a262
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9a262.dir/link.txt --verbose=1
-        /usr/bin/c++ CMakeFiles/cmTC_9a262.dir/src.cxx.o -o cmTC_9a262 
-        gmake[1]: Leaving directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-tSkrYH'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_62208/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_62208.dir/build.make CMakeFiles/cmTC_62208.dir/build
+        gmake[1]: Entering directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-t0K22F'
+        Building CXX object CMakeFiles/cmTC_62208.dir/src.cxx.o
+        /usr/bin/c++ -DATOMIC_TEST  -std=gnu++17 -o CMakeFiles/cmTC_62208.dir/src.cxx.o -c /home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-t0K22F/src.cxx
+        Linking CXX executable cmTC_62208
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_62208.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_62208.dir/src.cxx.o -o cmTC_62208 
+        gmake[1]: Leaving directory '/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/CMakeFiles/CMakeScratch/TryCompile-t0K22F'
         
       exitCode: 0
 ...

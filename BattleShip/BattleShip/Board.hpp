@@ -58,6 +58,6 @@ public:
     int countHits(int colorId);
 
 private:
-    Tile grid[10][10];
+    Tile grid[8][8];
     std::string getColorString(int colorCode);
 };

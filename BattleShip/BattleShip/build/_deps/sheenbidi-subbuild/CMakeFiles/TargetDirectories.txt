@@ -1,3 +1,0 @@
-/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/_deps/sheenbidi-subbuild/CMakeFiles/sheenbidi-populate.dir
-/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/_deps/sheenbidi-subbuild/CMakeFiles/edit_cache.dir
-/home/sam/Documents/SftDevGameProject/BattleShip/BattleShip/build/_deps/sheenbidi-subbuild/CMakeFiles/rebuild_cache.dir
