@@ -1,2 +1,13 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Ignore Inno Setup scripts from language stats
+*.iss linguist-vendored
+
+# Ignore the External dependencies (SFML) from stats
+External/** linguist-vendored
+Dependencies/** linguist-vendored
+
+# Ignore Visual Studio temporary files (just in case)
+*.vcxproj linguist-vendored
+*.sln linguist-vendored
