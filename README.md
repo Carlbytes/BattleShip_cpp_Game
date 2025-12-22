@@ -32,26 +32,26 @@
 
 <br />
 
-## 📜 Project Overview
+##  Project Overview
 A robust, multiplayer, turn-based Battleship game built in C++ using the SFML library for networking. This project demonstrates a strong understanding of **Object-Oriented Programming (OOP)**, **Network Socket Programming**, and **Software Architecture**.
 
 It features a Client-Server architecture allowing for LAN/WAN play, utilizes the Singleton design pattern for state management, and includes a professional Windows installer.
 
 ---
 
-## ✨ Key Features
+##  Key Features
 | Feature | Description |
 | :--- | :--- |
-| **📡 Networking** | TCP/IP socket connection handling via SFML Network module. |
-| **🏗️ OOP Design** | Utilizes **Inheritance** (Ship classes), **Polymorphism**, and **Encapsulation**. |
-| **🧠 Design Patterns** | Implements the **Singleton Pattern** for the GameManager to ensure state consistency. |
-| **🎮 Gameplay** | Cursor-based aiming, dynamic ship placement, and hit/miss tracking. |
-| **📦 Distribution** | Packaged with **Inno Setup** for a one-click install experience. |
-| **🧪 Testing** | Code reliability verified via Microsoft Native Unit Test Framework. |
+| ** Networking** | TCP/IP socket connection handling via SFML Network module. |
+| ** OOP Design** | Utilizes **Inheritance** (Ship classes), **Polymorphism**, and **Encapsulation**. |
+| ** Design Patterns** | Implements the **Singleton Pattern** for the GameManager to ensure state consistency. |
+| ** Gameplay** | Cursor-based aiming, dynamic ship placement, and hit/miss tracking. |
+| ** Distribution** | Packaged with **Inno Setup** for a one-click install experience. |
+| ** Testing** | Code reliability verified via Microsoft Native Unit Test Framework. |
 
 ---
 
-## 🛠️ Tech Stack & Tools
+##  Tech Stack & Tools
 * **Language:** C++17
 * **Networking/Graphics:** SFML (Simple and Fast Multimedia Library) 3.0.2
 * **IDE:** Visual Studio 2022
@@ -60,7 +60,7 @@ It features a Client-Server architecture allowing for LAN/WAN play, utilizes the
 
 ---
 
-## 🚀 How to Play (Windows)
+##  How to Play (Windows)
 **The Easy Way:**
 1.  Download the latest installer from the **[Releases]** tab on the right.
 2.  Run `Battleship_Setup.exe`.
@@ -68,7 +68,7 @@ It features a Client-Server architecture allowing for LAN/WAN play, utilizes the
 
 ---
 
-## ⚙️ Building from Source
+##  Building from Source
 If you are a developer and want to build the project yourself:
 
 ### Windows (Visual Studio)
